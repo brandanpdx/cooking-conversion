@@ -1,55 +1,98 @@
-var tbsToCup = function(tbs) {
+// Back-end logic:
+
+function tbsToCup(tbs) {
 	return tbs / 16;
 };
 
-var cupToTbs = function(cup) {
+function cupToTbs(cup) {
 	return cup * 16;
 };
 
-var tspToTbs = function(tsp) {
+function tspToTbs(tsp) {
 	return tsp / 3;
 };
 
-var tbsToTsp = function(tbs) {
+function tbsToTsp(tbs) {
 	return tbs * 3;
 };
 
-var cupToGal = function(cup) {
+function cupToGal(cup) {
 	return cup / 16;
 };
 
-var galToCup = function(gal) {
+function galToCup(gal) {
 	return gal * 16;
 };
 
-var qtToGal = function(qt) {
+function qtToGal(qt) {
 	return qt /4;
 };
 
-var galToQt = function(gal) {
+function galToQt(gal) {
 	return gal * 4;
 };
 
-var ptToQt = function(pt) {
+function ptToQt(pt) {
 	return pt / 2;
 };
 
-var qtToPt = function(qt) {
+function qtToPt(qt) {
 	return qt * 2;
 };
 
-var cupToPt = function(cup) {
+function cupToPt(cup) {
 	return cup / 2;
 };
 
-var ptToCup = function(pt) {
+function ptToCup(pt) {
 	return pt * 2;
 };
 
-var cupToFlOz = function(cup) {
+function cupToFlOz(cup) {
 	return cup / 8;
 };
 
-var flOzToCup = function(flOz) {
+function flOztoCup(flOz) {
 	return flOz * 8;
 };
+
+// Front-end logic:
+
+$(document).ready(function() {
+	$("form").submit(function(event) {
+		var quantity = parseInt($("input#quantity").val());
+		var conversionType = parseInt($("#conversiontype").val());
+
+		var result;
+		if (conversionType === 1) {
+			result = tbsToCup(quantity);
+		} else if (conversionType === 2) {
+			result = cupToTbs(quantity);
+		} else if (conversionType === 3) {
+			result = tspToTbs(quantity);
+		} else if (conversionType === 4) {
+			result = tbsToTsp(quantity);
+		} else if (conversionType === 5) {
+			result = cupToGal(quantity)
+		} else if (conversionType === 6) {
+			result = galToCup(quantity)
+		} else if (conversionType === 7) {
+			result = qtToGal(quantity)
+		} else if (conversionType === 8) {
+			result = galToQt(quantity);
+		} else if (conversionType === 9) {
+			result = ptToQt(quantity);
+		} else if (conversionType === 10) {
+			result = qtToPt(quantity);
+		} else if (conversionType === 11) {
+			result = ptToCup(quantity);
+		} else if (conversionType === 12) {
+			result = cupToFlOz(quantity);
+		} else if (conversionType === 13) {
+			result = flOztoCup(quantity);
+		}
+
+		$("#result").show();
+		$(".result").text(result);
+	})
+})
