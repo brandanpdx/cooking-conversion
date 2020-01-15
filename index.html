@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Cooking conversions</title>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
-  </head>
-  <body>
-    <script src="js/scripts.js"></script>
 
-    <h1>Cooking unit conversion</h1>
-  </body>
+<head>
+  <title>Cooking conversions</title>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+
+<body>
+  <script src="js/scripts.js"></script>
+
+  <h1>Cooking unit conversion</h1>
+
+  <form>
+    <div class="form-group">
+          <label for="person1">Enter a quantity:</label>
+          <input id="quantity" class="form-control" type="text">
+    </div>
+    
+    <p>Select a conversion:</p>
+    <select class="form-control" id="conversiontype">
+      <option value="1">Tablespoons to cups</option>
+      <option value="2">Cups to tablespoons</option>
+      <option value="3">Teaspoons to tablespoons</option>
+      <option value="4">Cups to gallons</option>
+      option>
+      <option value="5">Gallons to cups</option>
+      <option value="6">Quarts to gallons</option>
+      <option value="7">Gallons to quarts</option>
+      <option value="8">Pints to quarts</option>
+      option>
+      <option value="9">Quarts to pints</option>
+      <option value="10">Cups to pints</option>
+      <option value="11">Pints to cups</option>
+      <option value="12">Cup to fluid ounce</option>
+      <option value="13">Fluid ounces to cups</option>
+    </select>
+
+    <button type="submit" class="btn-info">Convert!</button>
+
+  </form>
+
+</body>
+
 </html>
