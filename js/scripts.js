@@ -60,6 +60,7 @@ function flOztoCup(flOz) {
 
 $(document).ready(function() {
 	$("form").submit(function(event) {
+		event.preventDefault();
 		var quantity = parseInt($("input#quantity").val());
 		var conversionType = parseInt($("#conversiontype").val());
 
@@ -85,10 +86,12 @@ $(document).ready(function() {
 		} else if (conversionType === 10) {
 			result = qtToPt(quantity);
 		} else if (conversionType === 11) {
-			result = ptToCup(quantity);
+			result = cupToPt(quantity);
 		} else if (conversionType === 12) {
-			result = cupToFlOz(quantity);
+			result = ptToCup(quantity);
 		} else if (conversionType === 13) {
+			result = cupToFlOz(quantity);
+		} else if (conversionType === 14) {
 			result = flOztoCup(quantity);
 		}
 
