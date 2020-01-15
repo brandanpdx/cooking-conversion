@@ -11,42 +11,42 @@
 
 <body>
   <div class="container">
-  <h1>Cooking unit conversion</h1>
+    <h1>Cooking unit conversion</h1>
 
-  <form>
-    <div class="form-group">
-          <label for="person1">Enter a quantity:</label>
-          <input id="quantity" class="form-control" type="text">
+    <form>
+      <div class="form-group">
+        <label for="person1">Enter a quantity:</label>
+        <input id="quantity" class="form-control" type="text">
+      </div>
+
+      <p>Select a conversion:</p>
+      <select class="form-control" id="conversiontype">
+        <option value="1">Tablespoons to cups</option>
+        <option value="2">Cups to tablespoons</option>
+        <option value="3">Teaspoons to tablespoons</option>
+        <option value="4">Tablespoons to teaspoons</option>
+        <option value="5">Cups to gallons</option>
+        option>
+        <option value="6">Gallons to cups</option>
+        <option value="7">Quarts to gallons</option>
+        <option value="8">Gallons to quarts</option>
+        <option value="9">Pints to quarts</option>
+        option>
+        <option value="10">Quarts to pints</option>
+        <option value="11">Cups to pints</option>
+        <option value="12">Pints to cups</option>
+        <option value="13">Cup to fluid ounce</option>
+        <option value="14">Fluid ounces to cups</option>
+      </select>
+
+      <button type="submit" class="btn-info">Convert!</button>
+
+    </form>
+
+    <div id="result">
+      <p><span class="result"></span></p>
     </div>
-
-    <p>Select a conversion:</p>
-    <select class="form-control" id="conversiontype">
-      <option value="1">Tablespoons to cups</option>
-      <option value="2">Cups to tablespoons</option>
-      <option value="3">Teaspoons to tablespoons</option>
-      <option value ="4">Tablespoons to teaspoons</option>
-      <option value="5">Cups to gallons</option>
-      option>
-      <option value="6">Gallons to cups</option>
-      <option value="7">Quarts to gallons</option>
-      <option value="8">Gallons to quarts</option>
-      <option value="9">Pints to quarts</option>
-      option>
-      <option value="10">Quarts to pints</option>
-      <option value="11">Cups to pints</option>
-      <option value="12">Pints to cups</option>
-      <option value="13">Cup to fluid ounce</option>
-      <option value="14">Fluid ounces to cups</option>
-    </select>
-
-    <button type="submit" class="btn-info">Convert!</button>
-
-  </form>
-
-  <div id="result">
-    <p><span class="result"></span></p>
   </div>
-</div>
 </body>
 
 </html>
